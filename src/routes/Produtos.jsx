@@ -1,8 +1,17 @@
 import React from 'react'
 
-const Produtos = () => {
+
+// Props - vai pegar dados de cada propriedade em outro local
+const Produtos = (imagem, titulo, descricao, preco) => {
   return (
-    <div>Produtos</div>
+    <article className="produto">
+
+      <img src={imagem} alt={titulo}/>
+      <h3>{titulo}</h3>
+      <p>{descricao}</p>
+      <p className="preco">{preco}</p>
+      <button>Comprar</button>
+    </article>
   )
 }
 
